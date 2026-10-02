@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>wi nail｜宝塚・清荒神のプライベートネイルサロン</title>
+<meta name="description" content="宝塚・清荒神の完全予約制プライベートネイルサロン wi nail。上品で肌なじみのいい大人可愛いデザイン。フィルイン対応、初回は他店ジェルオフ無料。清荒神駅徒歩7分。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Old+Mincho:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f8f2ef;
+  --paper:#fffaf8;
+  --ink:#3b2d2b;
+  --sub:#7d6a67;
+  --rose:#b4838a;
+  --rose-d:#8f5f67;
+  --line:#e6d6d1;
+  --rail:300px;
+  --demo:38px;
+  --head:96px;   /* スマホ上部のロゴ帯の高さ */
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;font-size:16px;line-height:1.95;letter-spacing:.03em;overflow-x:hidden}
+a{color:inherit}
+img,svg,video{display:block;max-width:100%}
+.serif{font-family:"Zen Old Mincho","Hiragino Mincho ProN","Yu Mincho",serif}
+.en{font-family:"Cormorant Garamond","Zen Old Mincho",serif;letter-spacing:.12em}
+
+.demo{background:var(--ink);color:#fff;font-size:12px;line-height:1.6;text-align:center;padding:8px 12px;letter-spacing:.04em;min-height:var(--demo)}
+
+/* レイアウト */
+.wrap{display:block}
+.rail{padding:22px 20px 14px;text-align:center;height:var(--head)}
+.logo{font-size:30px;line-height:1;color:var(--ink);text-decoration:none;display:inline-block}
+.logo small{display:block;font-size:10px;letter-spacing:.28em;margin-top:7px;color:var(--sub);font-family:"Zen Kaku Gothic New",sans-serif}
+.nav{display:none}
+main{min-width:0}
+@media(min-width:960px){
+  .wrap{display:grid;grid-template-columns:var(--rail) 1fr;min-height:100vh}
+  .rail{position:sticky;top:0;height:100vh;padding:56px 24px 40px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;border-right:1px solid var(--line);background:var(--bg);z-index:5}
+  .logo{font-size:34px}
+  .logo small{font-size:11px}
+  .nav{display:flex;flex-direction:column;gap:18px;align-items:center}
+  .nav a{writing-mode:vertical-rl;text-decoration:none;font-size:13px;letter-spacing:.14em;color:var(--sub);padding:2px 0;transition:color .3s}
+  .nav a:hover{color:var(--rose-d)}
+  .rail .btn{display:inline-flex}
+}
+.rail .btn{display:none}
+
+/* ボタン（CTAは1種類） */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:12px 30px;border-radius:999px;background:var(--rose-d);color:#fff;text-decoration:none;font-weight:700;font-size:15px;letter-spacing:.08em;box-shadow:0 6px 18px rgba(143,95,103,.28);transition:transform .25s,box-shadow .25s,background .25s}
+.btn:hover{background:#7b4f57;transform:translateY(-2px);box-shadow:0 10px 22px rgba(143,95,103,.34)}
+.btn:focus-visible{outline:3px solid #3b2d2b;outline-offset:3px}
+
+section{padding:76px 24px;max-width:760px;margin:0 auto}
+@media(min-width:960px){section{padding:104px 56px}}
+.label{display:block;font-size:13px;letter-spacing:.34em;color:var(--rose);margin-bottom:14px}
+h2{font-family:"Zen Old Mincho",serif;font-weight:500;font-size:26px;line-height:1.7;letter-spacing:.06em;margin-bottom:28px}
+@media(min-width:960px){h2{font-size:30px}}
+p+p{margin-top:1.1em}
+.lead{color:var(--sub)}
+.note{font-size:12.5px;color:var(--sub);line-height:1.8;margin-top:14px}
+
+/* ============ トップ（映像ヒーロー） ============ */
+.hero{position:relative;width:100%;overflow:hidden;background:var(--bg);max-width:none;padding:0;margin:0}
+.stage{position:relative;height:calc(100svh - var(--demo) - var(--head) - 310px);min-height:260px;max-height:560px;overflow:hidden;background:#efe3de}
+@media(min-width:960px){.hero{height:calc(100svh - var(--demo));min-height:620px;max-height:980px}.stage{position:absolute;inset:0;height:auto;max-height:none}}
+.hero-poster,.hv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-poster{background:url(assets/s1.jpg) 74% 50%/cover no-repeat;transition:opacity 1.6s ease;transform-origin:74% 50%}
+.hv{opacity:0;transition:opacity 1.6s ease;background:transparent}
+.hv.on{opacity:1}
+.hero.ready .hero-poster{opacity:0}
+.hero.kb .hero-poster{animation:kb 18s ease-out both}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.12)}}
+.shade{position:absolute;inset:0;pointer-events:none;background:linear-gradient(0deg,#f8f2ef 0%,rgba(248,242,239,0) 24%)}
+@media(min-width:960px){.shade{background:linear-gradient(90deg,rgba(248,242,239,.9) 0%,rgba(248,242,239,.62) 34%,rgba(248,242,239,0) 66%),linear-gradient(0deg,rgba(248,242,239,.5) 0%,rgba(248,242,239,0) 30%)}}
+.copy{position:relative;padding:6px 24px 44px;background:var(--bg)}
+@media(min-width:960px){.copy{position:absolute;left:0;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;padding:0 56px 0 64px;max-width:640px;background:none}}
+.eyebrow{font-size:12px;letter-spacing:.06em;color:var(--rose-d);font-weight:500}
+@media(min-width:960px){.eyebrow{font-size:12.5px;letter-spacing:.2em}}
+.cta-pc{display:none}
+@media(min-width:960px){.cta-pc{display:block}}
+.copy h1{font-family:"Zen Old Mincho",serif;font-weight:500;font-size:32px;line-height:1.5;letter-spacing:.08em;margin:12px 0 12px}
+@media(min-width:960px){.copy h1{font-size:50px;margin:18px 0 20px}}
+.copy h1 span{display:block}
+.sub{color:#5d4c49;margin-bottom:16px;font-size:14.5px;line-height:1.85}
+@media(min-width:960px){.sub{margin-bottom:22px;font-size:15px}}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.chip{border:1px solid var(--rose);color:var(--rose-d);border-radius:999px;padding:2px 13px;font-size:12.5px;line-height:1.8;background:rgba(255,250,248,.8)}
+.hero-note{position:absolute;right:14px;top:12px;font-size:11px;color:#6d5a57;background:rgba(255,250,248,.72);padding:2px 10px;border-radius:999px;letter-spacing:.04em}
+.scroll{display:none}
+@media(min-width:960px){
+  .scroll{display:block;position:absolute;left:64px;bottom:26px;font-size:11px;letter-spacing:.3em;color:var(--sub);padding-bottom:50px}
+  .scroll::after{content:"";position:absolute;left:50%;bottom:0;width:1px;height:42px;background:var(--rose);transform-origin:top;animation:cue 2.4s ease-in-out infinite}
+}
+@keyframes cue{0%{transform:scaleY(0)}55%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+
+/* 出だしの動き（表示される環境だけ。常時は本文が見える） */
+.anim .r{animation:rise 1.5s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i)*.2s + .35s)}
+@keyframes rise{from{opacity:0;transform:translateY(24px);filter:blur(6px)}to{opacity:1;transform:none;filter:blur(0)}}
+
+/* 画像の帯（ゆっくり動く） */
+.band{position:relative;height:46vh;min-height:280px;max-height:520px;overflow:hidden;max-width:none;padding:0;margin:0;background:#efe3de}
+.band img{position:absolute;left:0;top:-8%;width:100%;height:116%;object-fit:cover;will-change:transform}
+.band figcaption{position:absolute;right:14px;bottom:12px;font-size:11px;color:#6d5a57;background:rgba(255,250,248,.72);padding:2px 10px;border-radius:999px}
+
+/* 悩み */
+.worry{list-style:none;border-top:1px solid var(--line)}
+.worry li{padding:16px 0 16px 34px;border-bottom:1px solid var(--line);position:relative}
+.worry li::before{content:"";position:absolute;left:4px;top:25px;width:14px;height:14px;border-radius:50% 50% 50% 0;background:var(--rose);opacity:.55;transform:rotate(-45deg)}
+.worry-after{margin-top:28px}
+
+/* こだわり */
+.points{display:grid;gap:18px}
+.point{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:26px 24px}
+.point .no{font-size:30px;color:var(--rose);line-height:1}
+.point h3{font-family:"Zen Old Mincho",serif;font-weight:700;font-size:19px;margin:8px 0 8px;letter-spacing:.06em}
+.point p{color:var(--sub);font-size:15px;line-height:1.9}
+
+/* デザイン */
+.styles{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(min-width:620px){.styles{grid-template-columns:repeat(4,1fr)}}
+.style{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:24px 12px 20px;text-align:center}
+.dot{width:54px;height:54px;border-radius:50%;margin:0 auto 14px;box-shadow:inset 0 -6px 12px rgba(143,95,103,.12),0 4px 12px rgba(143,95,103,.14)}
+.d1{background:radial-gradient(circle at 32% 28%,#fbe9e5,#e9bfbb)}
+.d2{background:radial-gradient(circle at 32% 28%,#f8ece4,#dcc3b6)}
+.d3{background:linear-gradient(135deg,#d9b9bd,#f3e3e0 50%,#b98d95)}
+.d4{background:radial-gradient(circle at 32% 28%,#fffdfb,#f1e4e0 60%,#dcc9c4)}
+.style b{display:block;font-family:"Zen Old Mincho",serif;font-size:17px;margin-bottom:4px}
+.style span{font-size:13px;color:var(--sub);line-height:1.7;display:block}
+
+/* メニュー */
+.menu{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.menu h3{font-family:"Zen Old Mincho",serif;font-size:15px;font-weight:700;letter-spacing:.14em;color:var(--rose-d);padding:14px 22px;background:#f3e8e4}
+.row{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding:16px 22px;border-top:1px solid var(--line);align-items:baseline}
+.row:first-of-type{border-top:0}
+.row .name{font-weight:500}
+.row .price{text-align:right;white-space:nowrap}
+.row .old{display:block;font-size:12.5px;color:var(--sub);text-decoration:line-through;line-height:1.4}
+.row .now{font-family:"Zen Old Mincho",serif;font-weight:700;font-size:20px;color:var(--rose-d);line-height:1.4}
+.row .tag{grid-column:1/-1;font-size:12.5px;color:var(--sub);line-height:1.6}
+.menu+.menu{margin-top:18px}
+.benefit{margin-top:22px;border:1px dashed var(--rose);border-radius:14px;padding:16px 20px;background:rgba(255,250,248,.7);font-size:15px}
+.benefit b{color:var(--rose-d)}
+
+/* 流れ */
+.steps{list-style:none;counter-reset:s;display:grid;gap:14px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.steps li::before{content:counter(s);width:44px;height:44px;border-radius:50%;border:1px solid var(--rose);display:grid;place-items:center;font-family:"Cormorant Garamond",serif;font-size:20px;color:var(--rose-d);background:var(--paper)}
+.steps b{display:block;font-family:"Zen Old Mincho",serif;font-size:17px}
+.steps span{color:var(--sub);font-size:15px;line-height:1.85}
+
+/* 口コミ */
+.score{display:flex;align-items:center;gap:18px;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 24px}
+.score .num{font-family:"Cormorant Garamond",serif;font-size:54px;line-height:1;color:var(--rose-d)}
+.score small{display:block;color:var(--sub);font-size:13px;line-height:1.7}
+.voices{margin-top:18px;display:grid;gap:12px}
+.voices p{background:var(--paper);border-left:3px solid var(--rose);padding:14px 18px;border-radius:0 12px 12px 0;font-size:15px;line-height:1.85;margin:0}
+
+/* FAQ */
+details{border-bottom:1px solid var(--line);padding:2px 0}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:18px 36px 18px 0;position:relative;font-weight:500;min-height:48px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:6px;top:14px;font-size:24px;color:var(--rose);transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 0 20px;color:var(--sub);font-size:15px}
+
+/* アクセス */
+.info{display:grid;grid-template-columns:96px 1fr;border-top:1px solid var(--line)}
+.info dt,.info dd{padding:15px 0;border-bottom:1px solid var(--line)}
+.info dt{color:var(--rose-d);font-size:14px;font-weight:700}
+.info dd{font-size:15px}
+.maplink{display:inline-block;margin-top:6px;font-size:14px;color:var(--rose-d)}
+
+.last{text-align:center;padding-bottom:140px}
+.last h2{margin-bottom:18px}
+.ps{margin-top:36px;text-align:left;border-top:1px solid var(--line);padding-top:24px;color:var(--sub);font-size:15px}
+footer{text-align:center;color:var(--sub);font-size:12px;padding:0 24px 120px}
+@media(min-width:960px){footer{padding-bottom:60px}}
+
+.float{position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:linear-gradient(to top,rgba(248,242,239,.97) 70%,rgba(248,242,239,0))}
+.float .btn{width:100%;min-height:54px}
+@media(min-width:960px){.float{display:none}}
+
+/* スクロール出現（JSが動く環境だけ。動かなくても本文は見える） */
+.js .fade{opacity:0;transform:translateY(16px);transition:opacity .9s ease,transform .9s ease}
+.js .fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  .js .fade{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+  .anim .r{animation:none}
+  .hero.kb .hero-poster{animation:none}
+  .scroll::after{animation:none}
+}
+</style>
+</head>
+<body>
+<div class="demo">これはwi nail様向けに作ったデモ（非公開の見本）です。掲載内容はミニモ掲載情報（2026年10月1日時点）をもとにしています。</div>
+
+<div class="wrap">
+  <aside class="rail">
+    <a class="logo en" href="#top" aria-label="wi nail トップへ">wi nail<small>PRIVATE NAIL SALON</small></a>
+    <nav class="nav serif" aria-label="ページ内メニュー">
+      <a href="#about">こだわり</a>
+      <a href="#design">デザイン</a>
+      <a href="#menu">料金</a>
+      <a href="#flow">ご来店の流れ</a>
+      <a href="#faq">質問</a>
+      <a href="#access">アクセス</a>
+    </nav>
+    <a class="btn" data-cta href="https://minimodel.jp/r/0341FRb" target="_blank" rel="noopener">空き状況を見て予約する</a>
+  </aside>
+
+  <main id="top">
+    <!-- 1. トップ：映像ヒーロー -->
+    <section class="hero" id="hero" aria-label="wi nail トップ">
+      <div class="stage">
+      <div class="hero-poster" aria-hidden="true"></div>
+      <video class="hv" data-pos="74% 50%" muted playsinline preload="auto" aria-hidden="true"><source src="assets/s1.mp4" type="video/mp4"></video>
+      <video class="hv" data-pos="72% 50%" muted playsinline preload="none" aria-hidden="true"><source src="assets/s2.mp4" type="video/mp4"></video>
+      <video class="hv" data-pos="80% 50%" muted playsinline preload="none" aria-hidden="true"><source src="assets/s3.mp4" type="video/mp4"></video>
+      <div class="shade"></div>
+      <div class="hero-note">※ 映像はイメージ（AI生成）です</div>
+      </div>
+      <div class="copy">
+        <p class="eyebrow r" style="--i:0">宝塚・清荒神　完全予約制のプライベートネイルサロン</p>
+        <h1 class="r" style="--i:1"><span>大人可愛い、</span><span>上品な指先を。</span></h1>
+        <p class="sub r" style="--i:2">肌なじみのいい色と、シンプルからトレンドまでのデザイン。<br>周りを気にせず、ゆっくり過ごせるサロンです。</p>
+        <div class="chips r" style="--i:3">
+          <span class="chip">10月限定　初回40％OFF</span>
+          <span class="chip">他店ジェルオフ無料（初回）</span>
+          <span class="chip">フィルイン対応</span>
+        </div>
+        <div class="r cta-pc" style="--i:4"><a class="btn" data-cta href="https://minimodel.jp/r/0341FRb" target="_blank" rel="noopener">空き状況を見て予約する</a></div>
+      </div>
+      <div class="scroll en" aria-hidden="true">SCROLL</div>
+    </section>
+
+    <!-- 2. 悩み → 共感 -->
+    <section id="worry">
+      <span class="label en fade">WORRY</span>
+      <h2 class="fade">こんなことで、<br>迷っていませんか。</h2>
+      <ul class="worry fade">
+        <li>自分に似合う色が、どれか分からない</li>
+        <li>お仕事中も浮かない、上品なデザインにしたい</li>
+        <li>他のお店でつけたジェルを、外してもらえるか不安</li>
+        <li>爪をなるべくいためずに、ネイルを続けたい</li>
+        <li>周りを気にせず、ゆっくり相談しながら決めたい</li>
+      </ul>
+      <p class="worry-after lead fade">wi nailは、お客様一人ひとりの雰囲気やライフスタイルに合わせて、丁寧に施術するプライベートサロンです。迷ったままでも大丈夫。好みをお聞きしながら一緒に決めていきます。</p>
+    </section>
+
+    <figure class="band" aria-hidden="true"><img data-par src="assets/s2.jpg" alt="" loading="lazy"><figcaption>※ イメージ（AI生成）</figcaption></figure>
+
+    <!-- 3. こだわり -->
+    <section id="about">
+      <span class="label en fade">CONCEPT</span>
+      <h2 class="fade">wi nailの、<br>3つのこだわり。</h2>
+      <div class="points">
+        <div class="point fade"><span class="no en">01</span><h3>上品で、肌なじみのいいカラー</h3><p>手元になじむピンクやベージュを中心に、毎日見たくなる指先をご提案します。</p></div>
+        <div class="point fade"><span class="no en">02</span><h3>大人可愛いデザイン</h3><p>シンプル、オフィス、マグネット、パール。シンプルからトレンドまで、好みと予定に合わせて選べます。</p></div>
+        <div class="point fade"><span class="no en">03</span><h3>丁寧な施術と、完全プライベート</h3><p>完全予約制のプライベートサロンです。好みや要望を事細かに聞いてもらえた、というお声をいただいています。</p></div>
+      </div>
+    </section>
+
+    <!-- 4. デザイン -->
+    <section id="design">
+      <span class="label en fade">DESIGN</span>
+      <h2 class="fade">人気のデザインは、<br>この4つ。</h2>
+      <div class="styles">
+        <div class="style fade"><div class="dot d1"></div><b>シンプル</b><span>一色で整える、<br>清潔感のある仕上がり</span></div>
+        <div class="style fade"><div class="dot d2"></div><b>オフィス</b><span>お仕事中も浮かない、<br>控えめで上品な印象</span></div>
+        <div class="style fade"><div class="dot d3"></div><b>マグネット</b><span>角度で表情が変わる、<br>奥行きのある輝き</span></div>
+        <div class="style fade"><div class="dot d4"></div><b>パール</b><span>やわらかな光を重ねた、<br>やさしい華やかさ</span></div>
+      </div>
+      <p class="note fade">※ 丸い色見本は、デザインの方向性を示すイメージです。実際の作品は、ご予約後にお見せします。</p>
+    </section>
+
+    <figure class="band" aria-hidden="true"><img data-par src="assets/s3.jpg" alt="" loading="lazy"><figcaption>※ イメージ（AI生成）</figcaption></figure>
+
+    <!-- 5. 料金 -->
+    <section id="menu">
+      <span class="label en fade">MENU</span>
+      <h2 class="fade">料金と、<br>10月限定の初回価格。</h2>
+      <div class="menu fade">
+        <h3>HAND ／ ハンド</h3>
+        <div class="row"><span class="name">ワンカラー</span><span class="price"><span class="old">¥3,980</span><span class="now">¥2,388</span></span><span class="tag">新規限定・他店ジェルオフ無料（初回）</span></div>
+      </div>
+      <div class="menu fade">
+        <h3>FOOT ／ フット</h3>
+        <div class="row"><span class="name">ワンカラー</span><span class="price"><span class="old">¥4,980</span><span class="now">¥2,988</span></span></div>
+        <div class="row"><span class="name">マグネット</span><span class="price"><span class="old">¥5,980</span><span class="now">¥3,588</span></span></div>
+        <div class="row"><span class="name">定額デザイン</span><span class="price"><span class="old">¥7,980</span><span class="now">¥4,788</span></span></div>
+        <div class="row"><span class="name">持ち込みデザイン</span><span class="price"><span class="old">¥9,980〜</span><span class="now">¥5,988〜</span></span></div>
+      </div>
+      <p class="benefit fade"><b>初回のお客様へ。</b>他店でつけたジェルのオフが無料です。カラー変更や2色の組み合わせもご相談ください。フィルインにも対応しています。</p>
+      <p class="note fade">※ 表示は新規限定・10月限定の価格です（ミニモ掲載、2026年10月1日時点）。2回目以降の料金・ハンドのその他メニューは、予約画面でご確認ください。</p>
+    </section>
+
+    <!-- 6. 流れ -->
+    <section id="flow">
+      <span class="label en fade">FLOW</span>
+      <h2 class="fade">はじめての方へ、<br>ご来店までの流れ。</h2>
+      <ol class="steps">
+        <li class="fade"><div><b>空き状況を見て予約</b><span>下のボタンから、空いている日時をそのまま選べます。メニューに迷う場合は、予約時にご相談ください。</span></div></li>
+        <li class="fade"><div><b>当日のカウンセリング</b><span>好みや普段のご予定をお聞きして、色とデザインを一緒に決めます。</span></div></li>
+        <li class="fade"><div><b>施術</b><span>周りを気にせず、ゆっくりお過ごしください。</span></div></li>
+        <li class="fade"><div><b>お会計（現金）</b><span>お支払いは現金です。</span></div></li>
+      </ol>
+    </section>
+
+    <!-- 7. 口コミ -->
+    <section id="voice">
+      <span class="label en fade">VOICE</span>
+      <h2 class="fade">ご来店いただいた方の、<br>評価。</h2>
+      <div class="score fade">
+        <div class="num en">5.0</div>
+        <div><b class="serif">ミニモの口コミ評価</b><small>口コミ9件（2026年10月1日時点）<br>年代は20代から50代まで、幅広くご来店いただいています。</small></div>
+      </div>
+      <div class="voices fade">
+        <p>予約前のやり取りから丁寧で、安心できたというお声をいただいています。</p>
+        <p>好みを細かく聞いてもらえた、仕上がりがかわいい、というお声をいただいています。</p>
+        <p>施術がスムーズで、無理なお願いも聞いてもらえた、というお声をいただいています。</p>
+      </div>
+      <p class="note fade">※ ミニモの口コミの内容を要約しています。掲載前にご確認いただきます。</p>
+    </section>
+
+    <!-- 8. FAQ -->
+    <section id="faq">
+      <span class="label en fade">FAQ</span>
+      <h2 class="fade">よくあるご質問</h2>
+      <div class="fade">
+        <details><summary>他店でつけたジェルも外してもらえますか？</summary><p>はい。初回は他店でつけたジェルのオフが無料です。</p></details>
+        <details><summary>爪をいためたくないのですが…</summary><p>フィルインに対応しています。ご希望は、ご予約時やご来店時にお伝えください。</p></details>
+        <details><summary>デザインが決まっていなくても大丈夫ですか？</summary><p>大丈夫です。好みや普段のご予定をお聞きして、一緒に決めます。持ち込みデザインのメニューもあります。</p></details>
+        <details><summary>色を途中で変えたり、2色を組み合わせたりできますか？</summary><p>はい。カラー変更や2色の組み合わせもご相談ください。</p></details>
+        <details><summary>営業時間と定休日は？</summary><p>月曜から金曜の9:30〜17:00です。土曜・日曜・祝日はお休みをいただいています。</p></details>
+        <details><summary>支払い方法は？</summary><p>現金でお願いしています。</p></details>
+      </div>
+    </section>
+
+    <!-- 9. アクセス -->
+    <section id="access">
+      <span class="label en fade">ACCESS</span>
+      <h2 class="fade">サロン情報</h2>
+      <dl class="info fade">
+        <dt>サロン名</dt><dd>wi nail（ウィネイル）</dd>
+        <dt>所在地</dt><dd>兵庫県宝塚市宮の町15-5　荒神川ビル202<br><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=%E5%85%B5%E5%BA%AB%E7%9C%8C%E5%AE%9D%E5%A1%9A%E5%B8%82%E5%AE%AE%E3%81%AE%E7%94%BA15-5" target="_blank" rel="noopener">地図を開く →</a></dd>
+        <dt>最寄り駅</dt><dd>清荒神駅から徒歩7分<br>宝塚南口駅・宝塚駅から徒歩10分</dd>
+        <dt>営業時間</dt><dd>月〜金　9:30〜17:00</dd>
+        <dt>定休日</dt><dd>土・日・祝</dd>
+        <dt>お支払い</dt><dd>現金</dd>
+        <dt>予約</dt><dd>完全予約制</dd>
+      </dl>
+    </section>
+
+    <!-- 10. ラスト -->
+    <section class="last">
+      <span class="label en fade">RESERVATION</span>
+      <h2 class="fade">毎日見たくなる指先を、<br>一緒に。</h2>
+      <p class="lead fade" style="margin-bottom:28px">10月は、初回のお客様が全メニュー40％OFFです。<br>空き状況を見て、そのままご予約いただけます。</p>
+      <a class="btn fade" data-cta href="https://minimodel.jp/r/0341FRb" target="_blank" rel="noopener">空き状況を見て予約する</a>
+      <p class="ps fade"><b class="serif">追伸。</b>デザインやメニューに迷っている段階でも大丈夫です。予約の際にひとこと添えていただければ、当日のご相談がスムーズになります。</p>
+    </section>
+    <footer class="en">© wi nail</footer>
+  </main>
+</div>
+
+<div class="float"><a class="btn" data-cta href="https://minimodel.jp/r/0341FRb" target="_blank" rel="noopener">空き状況を見て予約する</a></div>
+
+<script>
+/* 予約先は1か所だけ。LINEなどに変える場合はここだけ書き換える */
+var BOOKING_URL="https://minimodel.jp/r/0341FRb";
+document.querySelectorAll("[data-cta]").forEach(function(a){a.href=BOOKING_URL});
+
+(function(){
+  var root=document.documentElement;
+  var reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var shown=document.visibilityState==="visible";
+  var hero=document.getElementById("hero");
+  var vids=[].slice.call(hero.querySelectorAll(".hv"));
+  var poster=hero.querySelector(".hero-poster");
+
+  /* 出だしの文字アニメ：表示されている環境だけで有効にする */
+  if(shown&&!reduce){root.classList.add("anim")}
+
+  /* 映像：3本を順にゆっくり切り替える。再生できない・動きを減らす設定のときは静止画＋ゆっくりズーム */
+  function still(){hero.classList.add("kb")}
+  if(reduce){ still(); }
+  else{
+    var cur=-1,timer=null,failed=false;
+    function show(i){
+      cur=i;
+      vids.forEach(function(v,k){ if(k!==i){v.classList.remove("on")} });
+      var v=vids[i];
+      v.style.objectPosition=v.getAttribute("data-pos");
+      v.preload="auto";
+      try{v.currentTime=0}catch(e){}
+      var p=v.play();
+      if(p&&p.catch){p.catch(function(){ if(!failed){failed=true;still()} })}
+      v.classList.add("on");
+      poster.style.backgroundPosition=vids[0].getAttribute("data-pos");
+    }
+    vids.forEach(function(v,i){
+      v.addEventListener("playing",function(){ hero.classList.add("ready") });
+      v.addEventListener("timeupdate",function(){
+        if(i!==cur||!v.duration)return;
+        if(v.duration-v.currentTime<1.6&&!v._q){ v._q=true; show((i+1)%vids.length); setTimeout(function(){v._q=false;v.pause()},1800) }
+      });
+      v.addEventListener("ended",function(){ if(i===cur){ show((i+1)%vids.length) } });
+    });
+    show(0);
+    /* 画面外では止めて、電池と通信を節約 */
+    if("IntersectionObserver" in window){
+      new IntersectionObserver(function(es){es.forEach(function(e){
+        var v=vids[cur]; if(!v)return;
+        if(e.isIntersecting){ v.play&&v.play().catch(function(){}) } else { v.pause() }
+      })},{threshold:.15}).observe(hero);
+    }
+    /* 数秒たっても動かなければ静止画に切り替える */
+    setTimeout(function(){ if(!hero.classList.contains("ready")&&!failed){failed=true;still()} },4500);
+  }
+
+  /* スクロール出現 */
+  var els=document.querySelectorAll(".fade");
+  if("IntersectionObserver" in window&&shown){
+    root.classList.add("js");
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{rootMargin:"0px 0px -8% 0px"});
+    els.forEach(function(el){io.observe(el)});
+    setTimeout(function(){els.forEach(function(el){el.classList.add("in")})},5000);
+  }
+
+  /* 画像の帯：スクロールに合わせてゆっくりずれる */
+  var pars=[].slice.call(document.querySelectorAll("[data-par]"));
+  if(pars.length&&!reduce&&shown){
+    var tick=false;
+    function upd(){
+      tick=false;
+      var vh=window.innerHeight;
+      pars.forEach(function(img){
+        var r=img.parentNode.getBoundingClientRect();
+        if(r.bottom<0||r.top>vh)return;
+        var p=(r.top+r.height/2-vh/2)/vh;      /* -1〜1 */
+        img.style.transform="translate3d(0,"+(p*-6).toFixed(2)+"%,0) scale(1.04)";
+      });
+    }
+    window.addEventListener("scroll",function(){ if(!tick){tick=true;requestAnimationFrame(upd)} },{passive:true});
+    upd();
+  }
+})();
+</script>
+</body>
+</html>
